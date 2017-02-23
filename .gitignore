@@ -38,10 +38,10 @@ jspm_packages
 
 # Others
 .DS_Store
-node_modules
-npm-debug.log
-codeship.aes
-notifier.env
-
 *.gz
 *.tar
+
+# Secrets
+codeship.aes
+notifier.env
+deployment.env
