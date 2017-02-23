@@ -1,0 +1,17 @@
+meteor:
+  build:
+    context: .
+    dockerfile: Dockerfile.development
+  links:
+    - mongo
+    - mongo:mongo.cloud66.local  
+  environment:
+    -  MONGO_URL=mongodb://mongo:27017/meteor
+notifier:
+  build:
+    context: .
+    dockerfile: Dockerfile.notifier
+    encrypted_env_file: notifier.env.encrypted
+    
+mongo:
+  image: mongo:3.0.14 
